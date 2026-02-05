@@ -11,7 +11,19 @@
 
         <Button Text="Logout" Clicked="OnLogoutClicked" />
 
-        <Label Text="Hard-coded events list will go here (next step)." FontSize="12" />
+        <CollectionView x:Name="EventsList" SelectionMode="Single" SelectionChanged="OnEventSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Padding="12">
+                        <Label Text="{Binding EventName}" FontAttributes="Bold" FontSize="16" />
+                        <Label Text="{Binding HostName}" FontSize="13" />
+                        <Label Text="{Binding EventDateTime}" FontSize="12" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label Text="Tap an event to view details (next step)." FontSize="12" />
 
     </VerticalStackLayout>
 </ContentPage>

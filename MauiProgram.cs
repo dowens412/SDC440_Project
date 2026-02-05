@@ -23,11 +23,10 @@ public static class MauiProgram
         builder.Logging.AddDebug();
 #endif
 
-        // App state + services
         builder.Services.AddSingleton<AppState>();
         builder.Services.AddSingleton<AuthService>();
+        builder.Services.AddSingleton<EventService>(); // <-- add this
 
-        // Pages
         builder.Services.AddTransient<LoginPage>();
         builder.Services.AddTransient<EventsAllPage>();
 

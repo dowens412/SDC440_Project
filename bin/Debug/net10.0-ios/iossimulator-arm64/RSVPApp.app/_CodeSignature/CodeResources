@@ -16,6 +16,10 @@
 		<data>
 		vBJIsk3IxLOlRSAckUluKdeyQn4=
 		</data>
+		<key>MauiInfo.plist</key>
+		<data>
+		iEtuUGCV6JM3gxS/pO33swhmpp8=
+		</data>
 		<key>MauiSplash.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
 		Y78DTyz7+rkuDbhphGJe+YK2rLQ=
@@ -146,11 +150,11 @@
 		</data>
 		<key>RSVPApp.dll</key>
 		<data>
-		vTa/GQYpEDRIfd3mlyW4cJ2W+AM=
+		8+xwcUchzQHZJ5zwYQXmpwSavBw=
 		</data>
 		<key>RSVPApp.pdb</key>
 		<data>
-		KOmoMbKIHayi0Yba9TajE1ozFXc=
+		LuUUg7lnu1a+XuQfRWME62DYbV0=
 		</data>
 		<key>Settings.bundle/Root.plist</key>
 		<data>
@@ -1065,6 +1069,13 @@
 			D6/LT5fInmVppMelPLO4RU8Uw1McdsCjnURQDc0+yQc=
 			</data>
 		</dict>
+		<key>MauiInfo.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tx0KXqEC+DvcCGyogQTEQWHcCWJYYqH24NtPwhpQEjo=
+			</data>
+		</dict>
 		<key>MauiSplash.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -1286,14 +1297,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xwrc19yuyCJFbfYkGz5I8zQuCfOMN0Ze+AE+/2KudPU=
+			3Fmb1Aqg+Ll3lIx6PxXUlSb2nunakemAZpX5T87Wrv8=
 			</data>
 		</dict>
 		<key>RSVPApp.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PH2duc/bxa6ZjdM3fsXw5tkW5d3jLZY6+82SFOOxmQ4=
+			ZqxnM+yMM3BxgnL4uUPLlatrO/2K73QbjoUYAr0fbcs=
 			</data>
 		</dict>
 		<key>Settings.bundle/Root.plist</key>
