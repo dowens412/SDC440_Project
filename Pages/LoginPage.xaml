@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="RSVPApp.Pages.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Login">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+
+            <Label Text="RSVP App" FontSize="28" />
+            <Label Text="Log in as a validated user or continue as guest." FontSize="14" />
+
+            <Entry x:Name="EmailEntry" Placeholder="E-Mail Address" Keyboard="Email" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
+
+            <Button Text="Log In" Clicked="OnLoginClicked" />
+            <Button Text="Continue as Guest" Clicked="OnGuestClicked" />
+
+            <Label Text="Hard-coded login (Week 2):" FontAttributes="Bold" Margin="0,18,0,0" />
+            <Label Text="Email: test@example.com" />
+            <Label Text="Password: Password123" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
