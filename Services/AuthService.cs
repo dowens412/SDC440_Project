@@ -1,23 +1,36 @@
+using RSVPApp.Models;
+
 namespace RSVPApp.Services;
 
 public class AuthService
 {
-    // Week 2 hard-coded credentials
-    private const string HardEmail = "test@example.com";
-    private const string HardPassword = "Password123";
-    private const string HardName = "Test User";
+    private readonly DatabaseService _db;
 
-    public bool Validate(string email, string password, out (string name, string email) user)
+    public AuthService(DatabaseService db)
     {
-        user = default;
+        _db = db;
+    }
 
-        if (string.Equals(email?.Trim(), HardEmail, StringComparison.OrdinalIgnoreCase)
-            && password == HardPassword)
-        {
-            user = (HardName, HardEmail);
-            return true;
-        }
+    public async Task<(bool ok, string message, (string name, string email) user)> ValidateAsync(string email, string password)
+    {
+        var cleanEmail = (email ?? "").Trim();
+        var cleanPassword = password ?? "";
 
-        return false;
+        if (string.IsNullOrWhiteSpace(cleanEmail) || string.IsNullOrWhiteSpace(cleanPassword))
+            return (false, "Please enter an email and password.", default);
+
+        var user = await _db.GetUserByEmailAsync(cleanEmail);
+
+        if (user == null)
+            return (false, "No account found for that email.", default);
+
+        if (user.Password != cleanPassword)
+            return (false, "Invalid password.", default);
+
+        var displayName = $"{user.FirstName} {user.LastName}".Trim();
+        if (string.IsNullOrWhiteSpace(displayName))
+            displayName = user.Email;
+
+        return (true, "OK", (displayName, user.Email));
     }
 }

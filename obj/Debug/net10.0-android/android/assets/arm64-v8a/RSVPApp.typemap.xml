@@ -1,4 +1,4 @@
-<api type="debug" assembly-name="RSVPApp" mvid="5700419cb0b44da5963fd4579d235691">
+<api type="debug" assembly-name="RSVPApp" mvid="214642be78c24aaeaf625a6a5ee01f70">
   <java-to-managed>
     <entry java-name="crc6482d49960a17b50ef/MainActivity" managed-name="RSVPApp.MainActivity, RSVPApp" managed-type-token-id="33554441" />
     <entry java-name="crc6482d49960a17b50ef/MainApplication" managed-name="RSVPApp.MainApplication, RSVPApp" managed-type-token-id="33554442" />

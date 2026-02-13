@@ -150,11 +150,27 @@
 		</data>
 		<key>RSVPApp.dll</key>
 		<data>
-		8+xwcUchzQHZJ5zwYQXmpwSavBw=
+		2KcdvR07OoCLBjkXCZTExldS2lI=
 		</data>
 		<key>RSVPApp.pdb</key>
 		<data>
-		LuUUg7lnu1a+XuQfRWME62DYbV0=
+		ut4cQI/+ge1IRYoOXceRb0+QK4Y=
+		</data>
+		<key>SQLite-net.dll</key>
+		<data>
+		42PRq5815Oe9aTbb+iFnhBSgP3U=
+		</data>
+		<key>SQLitePCLRaw.batteries_v2.dll</key>
+		<data>
+		YhjbXat5IgQKVmn5XWHbPSPgUjs=
+		</data>
+		<key>SQLitePCLRaw.core.dll</key>
+		<data>
+		Q/MjCEY3hOppExh7FkjxhRk2bfc=
+		</data>
+		<key>SQLitePCLRaw.provider.sqlite3.dll</key>
+		<data>
+		HrYhWGqf4UkJmFj//zfzkh052yE=
 		</data>
 		<key>Settings.bundle/Root.plist</key>
 		<data>
@@ -1297,14 +1313,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3Fmb1Aqg+Ll3lIx6PxXUlSb2nunakemAZpX5T87Wrv8=
+			nznKF9OBLxzrCPmH8JJvDG1tjFZB89ommVl02LdpMA8=
 			</data>
 		</dict>
 		<key>RSVPApp.pdb</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZqxnM+yMM3BxgnL4uUPLlatrO/2K73QbjoUYAr0fbcs=
+			lV1mYTsvC8zYIeHodRfL8e/8ISiqhdejck7sahzvXuM=
+			</data>
+		</dict>
+		<key>SQLite-net.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/0h0FMSssyqe6OCqk97walP3tX35PS56JgVOGN+Fcj4=
+			</data>
+		</dict>
+		<key>SQLitePCLRaw.batteries_v2.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7FPJ7khZq8aEfA23SVsGSgvktv6rbvHNzIf2fe/siJs=
+			</data>
+		</dict>
+		<key>SQLitePCLRaw.core.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			28/QTpWu+p7w3K1M0gAJsBjdPSlDyMzz9AWXue2RYbg=
+			</data>
+		</dict>
+		<key>SQLitePCLRaw.provider.sqlite3.dll</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ACnmPCGZV7KnqEw4vOZg0h0fjUwPo1hIkdkczw0VP20=
 			</data>
 		</dict>
 		<key>Settings.bundle/Root.plist</key>

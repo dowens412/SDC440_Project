@@ -20,20 +20,16 @@ public partial class LoginPage : ContentPage
         var email = EmailEntry.Text?.Trim() ?? "";
         var password = PasswordEntry.Text ?? "";
 
-        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
-        {
-            await DisplayAlert("Validation", "Please enter an email and password.", "OK");
-            return;
-        }
+        var result = await _auth.ValidateAsync(email, password);
 
-        if (_auth.Validate(email, password, out var user))
+        if (result.ok)
         {
-            _state.Login(user.name, user.email);
+            _state.Login(result.user.name, result.user.email);
             await Shell.Current.GoToAsync($"//{nameof(EventsAllPage)}");
             return;
         }
 
-        await DisplayAlert("Login Failed", "Invalid email or password.", "OK");
+        await DisplayAlert("Login Failed", result.message, "OK");
     }
 
     private async void OnGuestClicked(object sender, EventArgs e)

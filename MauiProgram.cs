@@ -24,12 +24,23 @@ public static class MauiProgram
 #endif
 
         builder.Services.AddSingleton<AppState>();
+
+        // NEW: database
+        builder.Services.AddSingleton<DatabaseService>();
+
+        // Existing services (we will modify these in the next steps to use DatabaseService)
         builder.Services.AddSingleton<AuthService>();
-        builder.Services.AddSingleton<EventService>(); // <-- add this
+        builder.Services.AddSingleton<EventService>();
 
         builder.Services.AddTransient<LoginPage>();
         builder.Services.AddTransient<EventsAllPage>();
 
-        return builder.Build();
+        var app = builder.Build();
+
+        // Seed DB once on startup (Week 3 demo)
+        var db = app.Services.GetRequiredService<DatabaseService>();
+        _ = db.SeedIfEmptyAsync();
+
+        return app;
     }
 }
