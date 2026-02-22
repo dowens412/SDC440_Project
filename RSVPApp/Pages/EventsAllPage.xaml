@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RSVPApp.Pages.EventsAllPage"
+    Title="Events">
+
+    <VerticalStackLayout Padding="12" Spacing="10">
+        <HorizontalStackLayout Spacing="10">
+            <Picker x:Name="FilterPicker"
+                    Title="Filter"
+                    SelectedIndexChanged="OnFilterChanged">
+                <Picker.Items>
+                    <x:String>All</x:String>
+                    <x:String>Attending</x:String>
+                    <x:String>Hosting</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="Add Event" Clicked="OnAddEventClicked" />
+        </HorizontalStackLayout>
+
+        <CollectionView x:Name="EventsList"
+                        SelectionMode="Single"
+                        SelectionChanged="OnEventSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="12" Margin="0,6" BorderColor="LightGray">
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="{Binding EventName}" FontAttributes="Bold" />
+                            <Label Text="{Binding HostName}" FontSize="12" />
+                            <Label Text="{Binding EventAddress}" FontSize="12" />
+                            <Label Text="{Binding EventDateTimeUtc}" FontSize="12" />
+                            <Label Text="{Binding CurrentAttendeeCount}" FontSize="12" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label x:Name="StatusLabel" TextColor="Red" />
+    </VerticalStackLayout>
+
+</ContentPage>

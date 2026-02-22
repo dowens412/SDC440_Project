@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:RSVPApp.Pages"
+    x:Class="RSVPApp.AppShell">
+
+    <!-- Login is the start -->
+    <ShellContent
+        Route="login"
+        ContentTemplate="{DataTemplate local:LoginPage}" />
+
+    <!-- Events becomes the main area after login -->
+    <TabBar Route="events">
+        <ShellContent
+            Title="Events"
+            Route="eventsAll"
+            ContentTemplate="{DataTemplate local:EventsAllPage}" />
+    </TabBar>
+
+</Shell>

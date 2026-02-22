@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="RSVPApp.Pages.AddEventPage"
+    Title="Add Event">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+
+            <Entry x:Name="HostNameEntry"
+                   Placeholder="Name of the Person Hosting the Event" />
+
+            <Entry x:Name="EventNameEntry"
+                   Placeholder="Event Name" />
+
+            <Entry x:Name="AddressEntry"
+                   Placeholder="Event Address" />
+
+            <Entry x:Name="MaxEntry"
+                   Placeholder="Maximum Allowed Attendees"
+                   Keyboard="Numeric" />
+
+            <Label Text="Event Date and Time" FontAttributes="Bold" />
+            <DatePicker x:Name="EventDatePicker" />
+            <TimePicker x:Name="EventTimePicker" />
+
+            <Label Text="Deadline to RSVP" FontAttributes="Bold" />
+            <DatePicker x:Name="DeadlineDatePicker" />
+            <TimePicker x:Name="DeadlineTimePicker" />
+
+            <Button Text="Save Event" Clicked="OnSaveClicked" />
+
+            <Label x:Name="StatusLabel" TextColor="Red" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
