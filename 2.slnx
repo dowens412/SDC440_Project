@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="RSVPApi/RSVPApi.csproj" />
+  <Project Path="RSVPApp/RSVPApp.csproj" />
+</Solution>
