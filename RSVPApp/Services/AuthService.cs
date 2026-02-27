@@ -63,7 +63,6 @@ public class AuthService
         // Save “session”
         _appState.SetUser(user);
 
-        // Save credentials WITHOUT SecureStorage (fixes MissingEntitlement on Mac)
         await _creds.SaveAsync(email, password);
 
         return user;
